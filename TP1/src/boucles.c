@@ -1,37 +1,38 @@
 #include <stdio.h>
 
 int main() {
-    int compteur = 24;  // à modifier pour tester d'autres valeurs (<10)
+    int compteur = 5;  // modifier pour tester
 
     if (compteur >= 10 || compteur < 1) {
         printf("Erreur : compteur doit être entre 1 et 9.\n");
         return 1;
     }
 
-    for (int i = 1; i <= compteur; i++) {
+    int i = 1;
+    while (i <= compteur) {
 
-        // première ou dernière ligne : que des étoiles
         if (i == 1 || i == compteur) {
-            for (int j = 1; j <= i; j++) {
+            // lignes pleines d'étoiles
+            int j = 1;
+            while (j <= i) {
                 printf("* ");
+                j++;
             }
         } else {
-            // début
-            printf("* ");
+            printf("* ");  // début
 
-            // milieu (i - 2 fois le caractère #)
-            for (int j = 1; j <= i - 2; j++) {
+            int j = 1;
+            while (j <= i - 2) {  // # au milieu
                 printf("# ");
+                j++;
             }
 
-            // fin
-            printf("* ");
+            printf("* ");  // fin
         }
 
         printf("\n");
+        i++;
     }
 
     return 0;
 }
-
-
