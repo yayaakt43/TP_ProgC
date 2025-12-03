@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int compteur = 7;  // à modifier pour tester d'autres valeurs (<10)
+    int compteur = 24;  // à modifier pour tester d'autres valeurs (<10)
 
     if (compteur >= 10 || compteur < 1) {
         printf("Erreur : compteur doit être entre 1 et 9.\n");
@@ -33,4 +33,5 @@ int main() {
 
     return 0;
 }
+
 
