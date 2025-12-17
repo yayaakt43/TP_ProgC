@@ -94,5 +94,23 @@ void exercice_4_2(void) {
     }
 }
 
+void exercice_4_7(void) {
+    struct liste_couleurs liste;
+    init_liste(&liste);
+
+    struct couleur couleurs[3] = {
+        {255, 0, 0, 255},
+        {0, 255, 0, 255},
+        {0, 0, 255, 255}
+    };
+
+    for (int i = 0; i < 3; i++) {
+        insertion(&couleurs[i], &liste);
+    }
+
+    printf("Liste des couleurs :\n");
+    parcours(&liste);
+}
+
 
 
