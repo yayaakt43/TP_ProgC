@@ -68,3 +68,31 @@ void exercice_4_1(void) {
     printf("Résultat : %d\n", resultat);
 }
 
+void exercice_4_2(void) {
+    int choix;
+    char nom[100];
+    char message[256];
+
+    printf("1 - Lire un fichier\n");
+    printf("2 - Écrire dans un fichier\n");
+    printf("Votre choix : ");
+    scanf("%d", &choix);
+
+    if (choix == 1) {
+        printf("Nom du fichier : ");
+        scanf("%s", nom);
+        lire_fichier(nom);
+    } else if (choix == 2) {
+        printf("Nom du fichier : ");
+        scanf("%s", nom);
+        getchar(); // consommer \n
+        printf("Message : ");
+        fgets(message, sizeof(message), stdin);
+        ecrire_dans_fichier(nom, message);
+    } else {
+        printf("Choix invalide\n");
+    }
+}
+
+
+
