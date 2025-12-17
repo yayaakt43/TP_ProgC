@@ -1,19 +1,27 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-int main() {
+int main(void) {
     int a = 16;
     int b = 3;
 
-    // Opérations arithmétiques
-    printf("Addition : %d + %d = %d\n", a, b, a + b);
-    printf("Soustraction : %d - %d = %d\n", a, b, a - b);
-    printf("Multiplication : %d * %d = %d\n", a, b, a * b);
-    printf("Division : %d / %d = %d\n", a, b, a / b);
-    printf("Modulo : %d %% %d = %d\n", a, b, a % b);
+    // Opérateurs arithmétiques
+    printf("Addition (a + b) = %d\n", a + b);
+    printf("Soustraction (a - b) = %d\n", a - b);
+    printf("Multiplication (a * b) = %d\n", a * b);
 
-    // Opérateurs logiques/comparaison
-    printf("a est-il égal à b ? %d\n", a == b);
-    printf("a est-il supérieur à b ? %d\n", a > b);
+    // Division entière
+    printf("Division (a / b) = %d\n", a / b);
+
+    // Modulo
+    printf("Modulo (a %% b) = %d\n", a % b);
+
+    // Opérateurs de comparaison (logiques)
+    bool egal = (a == b);
+    bool superieur = (a > b);
+
+    printf("a == b : %s\n", egal ? "true" : "false");
+    printf("a > b  : %s\n", superieur ? "true" : "false");
 
     return 0;
 }
